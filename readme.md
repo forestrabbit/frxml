@@ -3,11 +3,11 @@
 ## 这是一个练习的项目
 frxml从零开始实现词法分析，语法分析，并构建节点树，支持节点树的增加节点，删除节点，修改节点功能。
 同时支持节点属性的新增、修改、删除功能
-支持节点的文本变更
-不支持DTD语法
+支持节点的文本变更\
+不支持DTD语法\
 不支持DTD和schema验证
 ## 使用方法
-使用 NewXmlDocument 方法创建一个新的文档对象，对象类型为XmlDocument
+使用 NewXmlDocument 方法创建一个新的文档对象，对象类型为XmlDocument\
 创建一个XmlDocument类型的变量document
 ```go
 document := NewXmlDocument()
@@ -93,5 +93,4 @@ document.Namespace  // map[string][string]
 ```go
 document.Declare["xml"]["version"]  // 获取version
 document.Declare["xml"]["encoding"]  // 获取encoding
-document.Declare[""]["version"]  // 获取version
 ```
