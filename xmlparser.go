@@ -639,7 +639,7 @@ func (document *XmlDocument) GetXml() string {
 }
 
 func (document *XmlDocument) Save(fileName string) {
-	file, err2 := os.OpenFile(fileName, os.O_WROBLY, 0)
+	file, err2 := os.OpenFile(fileName, os.O_CREATE | os.O_WRONLY, 0)
 	if err2 != nil {
 		fmt.Println(err2)
 		return
