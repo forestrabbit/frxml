@@ -637,3 +637,12 @@ func (document *XmlDocument) GetXml() string {
 	fun(document.root)
 	return res
 }
+
+func (document *XmlDocument) Save(fileName string) {
+	file := os.Open(fileName, os.O_WROBLY)
+	defer file.Close()
+	_, err := file.Write([]byte(document.GetXml()))
+	if err != nil {
+		fmt.Println(err)
+	}
+}

@@ -85,6 +85,10 @@ document.DefaultNamespace  // string
 ```go
 document.Namespace  // map[string][string]
 ```
+将文档树保存到xml文件中
+```go
+document.Save("xmlPath")
+```
 ### xml文档声明
 如果xml文档中有如下声明
 ```xml
